@@ -1,4 +1,4 @@
-# README for pix
+# introducing: pix
 
 ## Overview
 
