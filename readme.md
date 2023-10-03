@@ -35,6 +35,9 @@ The final argument is the color palette. You can browse available options in the
 
 
 ## Examples
+
+Original image left, dawn palette in the middle and nyx on the right.
+
 ### Resolution 4
 [![grafik.png](https://i.postimg.cc/qRPzNyT1/grafik.png)](https://postimg.cc/WF72KDtZ)
 
@@ -43,6 +46,9 @@ The final argument is the color palette. You can browse available options in the
 
 ### Resolution 12
 [![grafik.png](https://i.postimg.cc/5yjWWkGG/grafik.png)](https://postimg.cc/kRrpxw7F)
+
+### Resolution 18
+[![grafik.png](https://i.postimg.cc/fTmDz1kn/grafik.png)](https://postimg.cc/4mfrwLzB)
 
 ## Palettes
 
