@@ -35,12 +35,6 @@ server command
 
 ## Usage
 
-To convert an image into pixel art, run the following command:
-
-```bash
-python pix.py input.jpg 5 dawn
-```
-
 Select any input image that you want to modify. The number resolution of the output image defines it pixel density. A value of 1 indicates high pixel density, while a value of 20 suggests lower density.
 
 Caution: Lower pixel density values result in longer rendering times. You may need to experiment with this setting to achieve the desired output.
