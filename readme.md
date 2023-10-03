@@ -31,7 +31,7 @@ Select any input image that you want to modify. The number resolution of the out
 
 Caution: Lower pixel density values result in longer rendering times. You may need to experiment with this setting to achieve the desired output.
 
-The final argument is the color palette. You can browse available options or add your own in the palettes folder.
+The final argument is the color palette. You can browse available options or add your own in the `API/palettes` folder.
 
 
 ## Examples
