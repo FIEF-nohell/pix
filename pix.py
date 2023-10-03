@@ -3,10 +3,12 @@ import numpy as np
 import time
 import sys
 
+# Parse command line arguments
 name = sys.argv[1]
 resolution = int(sys.argv[2])
 pal = sys.argv[3]
 
+# Convert hex code to RGB
 def hex_to_rgb(hex_code):
     hex_code = hex_code.lstrip('#')
     return tuple(int(hex_code[i:i+2], 16) for i in (0, 2, 4))
@@ -14,10 +16,10 @@ def hex_to_rgb(hex_code):
 # Load hex codes from file
 with open(f'palettes/{pal}.hex', 'r') as file:
     hex_data = file.read()
-
 hex_codes = hex_data.strip().split('\n')
 palette = [hex_to_rgb(hex_code) for hex_code in hex_codes]
 
+# Find closest color
 def closest_color(rgb):
     r, g, b = rgb
     color_diffs = []
@@ -27,6 +29,7 @@ def closest_color(rgb):
         color_diffs.append(color_diff)
     return palette[np.argmin(color_diffs)]
 
+# Resize image
 def create_pixel_art(image_path, output_path, pixel_size):
     img = Image.open(image_path)
     img = img.resize(
