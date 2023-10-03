@@ -1,4 +1,4 @@
-# introducing: pix
+# Introducing: pix!
 
 ## Overview
 
@@ -33,6 +33,18 @@ Caution: Lower pixel density values result in longer rendering times. You may ne
 
 The final argument is the color palette. You can browse available options in the palettes folder.
 
+
+## Examples
+### Input:
+[![test.png](https://i.postimg.cc/QxK9s54y/test.png)](https://postimg.cc/F7msVfQy)
+
+
+
+### Palette: Dawn, Resolution: 5
+[![dawn-5-test-jpg.png](https://i.postimg.cc/k5qBxHn0/dawn-5-test-jpg.png)](https://postimg.cc/3kf8hn01)
+
+### Palette: Windows 95, Resolution: 5
+[![win95-5-test-jpg.png](https://i.postimg.cc/Y0G9rK3W/win95-5-test-jpg.png)](https://postimg.cc/JH8mxFSr)
 
 
 ## Palettes
