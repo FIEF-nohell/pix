@@ -21,13 +21,8 @@ pip install -r requirements.txt
 
 ## Starting
 
-Open a console in the root directory and run the following command:
-
-```bash
-python API/pix.py
-```
-
-Now the API for the tool should be running. The next step is to start a Webserver in order to interact with the website.
+It is very simple to run this tool. First open the `startAPI.bat` and after that is running open `startGUI.bat`. 
+When both are running the webserver should be open at `localhost:6969/index.html` 
 
 ```bash
 server command

@@ -40,7 +40,7 @@ function populateFolderDropdown() {
     const folderDropdown = document.getElementById('folderDropdown');
 
     // Make an AJAX request to the specific URL
-    fetch('http://127.0.0.1:5000/list_palettes')
+    fetch('http://127.0.0.1:6900/list_palettes')
         .then(response => response.json())
         .then(data => {
             // Assuming that data is an array of filenames
@@ -85,7 +85,7 @@ function sendData() {
             selectedItem: selectedItem
         };
 
-        fetch('http://127.0.0.1:5000/post_data', {
+        fetch('http://127.0.0.1:6900/post_data', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

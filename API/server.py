@@ -23,4 +23,4 @@ def post_data():
     return jsonify({'image': image})
 
 if __name__ == '__main__':
-    app.run()
+    app.run(port=6900)
