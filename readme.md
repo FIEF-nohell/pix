@@ -2,7 +2,7 @@
 
 ## Overview
 
-`pix` is a Python script that allows you to convert any image into pixel art. It offers the flexibility to use predefined color palettes or create your own for the output image.
+`pix` is a Python/HTML tool that allows you to convert any image into pixel art. It offers the flexibility to use predefined color palettes or create your own for the output image.
 
 ## Features
 
@@ -15,8 +15,22 @@ To install `pix`, you can clone the repository and install the required packages
 
 ```bash
 git clone https://github.com/FIEF-nohell/pix.git
-cd pix
+cd pix/API
 pip install -r requirements.txt
+```
+
+## Starting
+
+Open a console in the root directory and run the following command:
+
+```bash
+python API/pix.py
+```
+
+Now the API for the tool should be running. The next step is to start a Webserver in order to interact with the website.
+
+```bash
+server command
 ```
 
 ## Usage
@@ -27,11 +41,11 @@ To convert an image into pixel art, run the following command:
 python pix.py input.jpg 5 dawn
 ```
 
-Select an input image that is located in the root directory of the repository. The number following the image name specifies the pixel density of the output image, effectively serving as its resolution. A value of 1 indicates high pixel density, while a value of 20 suggests lower density.
+Select any input image that you want to modify. The number resolution of the output image defines it pixel density. A value of 1 indicates high pixel density, while a value of 20 suggests lower density.
 
 Caution: Lower pixel density values result in longer rendering times. You may need to experiment with this setting to achieve the desired output.
 
-The final argument is the color palette. You can browse available options in the palettes folder.
+The final argument is the color palette. You can browse available options or add your own in the palettes folder.
 
 
 ## Examples

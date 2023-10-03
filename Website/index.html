@@ -23,10 +23,13 @@
         </select>
         <br>
 
-        <button id="executeButton">Create Pixel Art</button>
+        <button id="executeButton" onClick="sendData()">Create Pixel Art</button>
 
         <!-- Placeholder for the generated pixel art image -->
-        <img id="pixelArtImage" src alt="Generated Pixel Art"
+        <img id="inputImage" src alt="Input Image"
+            style="display:none;">
+
+        <img id="generatedImage" src alt="Generated Image"
             style="display:none;">
 
     </body>

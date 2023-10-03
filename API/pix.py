@@ -1,28 +1,14 @@
+from io import BytesIO
 from PIL import Image
 import numpy as np
-import time
-import sys
-import os
-
-def populate_dropdown_from_folder(dropdown_var, dropdown_menu):
-    # Get list of all files and folders in the specified directory
-    folder_content = os.listdir("./palettes")
-    
-    # Update the dropdown options
-    dropdown_menu['menu'].delete(0, 'end')
-    for item in folder_content:
-        dropdown_menu['menu'].add_command(label=item, command=lambda value=item: dropdown_var.set(value))
-
-def check_output_folder():
-    if not os.path.exists("outputs"):
-        os.makedirs("outputs")
+import base64
     
 def hex_to_rgb(hex_code):
     hex_code = hex_code.lstrip('#')
     return tuple(int(hex_code[i:i+2], 16) for i in (0, 2, 4))
 
 def loadPalettes(pal):
-    with open(f'palettes/{pal}', 'r') as file:
+    with open(f'API/palettes/{pal}', 'r') as file:
         hex_data = file.read()
     hex_codes = hex_data.strip().split('\n')
     return [hex_to_rgb(hex_code) for hex_code in hex_codes]
@@ -38,11 +24,20 @@ def closest_color(rgb, palette):
     return palette[np.argmin(color_diffs)]
 
 # Resize image
-def create_pixel_art(image_path, output_path, pixel_size, _palette):
+def create_pixel_art(b64_image, pixel_size, _palette):
+    pixel_size = int(pixel_size)
+    # Decode the Base64 string into an image
+    try:
+        base64_decoded = base64.b64decode(b64_image.split(',')[1])  # Remove the 'data:image' prefix
+    except IndexError:  # Handle cases where the string might not be in 'data:image' format
+        base64_decoded = base64.b64decode(b64_image)
+
+    img = Image.open(BytesIO(base64_decoded))
+    
+    # Your existing logic to perform pixel art creation
     palette = loadPalettes(_palette)
-    img = Image.open(image_path)
     img = img.resize(
-        (img.size[0]//pixel_size, img.size[1]//pixel_size),
+        (img.size[0] // pixel_size, img.size[1] // pixel_size),
         Image.NEAREST
     )
     img = img.convert("RGB")
@@ -56,8 +51,11 @@ def create_pixel_art(image_path, output_path, pixel_size, _palette):
 
     pixel_art_img = Image.fromarray(np.uint8(img_array), 'RGB')
     pixel_art_img = pixel_art_img.resize(
-        (pixel_art_img.size[0]*pixel_size, pixel_art_img.size[1]*pixel_size),
+        (pixel_art_img.size[0] * pixel_size, pixel_art_img.size[1] * pixel_size),
         Image.NEAREST
     )
 
-    pixel_art_img.save(output_path, format='PNG')
+    output_buffer = BytesIO()
+    pixel_art_img.save(output_buffer, format='PNG')
+    output_base64 = base64.b64encode(output_buffer.getvalue()).decode('utf-8')
+    return f"data:image/png;base64,{output_base64}"
