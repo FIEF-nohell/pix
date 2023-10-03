@@ -38,7 +38,7 @@ The final argument is the color palette. You can browse available options in the
 ### Input:
 [![test.png](https://i.postimg.cc/QxK9s54y/test.png)](https://postimg.cc/F7msVfQy)
 
-
+[![grafik.png](https://i.postimg.cc/qRPzNyT1/grafik.png)](https://postimg.cc/WF72KDtZ)
 
 ### Palette: Dawn, Resolution: 5
 [![dawn-5-test-jpg.png](https://i.postimg.cc/k5qBxHn0/dawn-5-test-jpg.png)](https://postimg.cc/3kf8hn01)
