@@ -2,12 +2,18 @@ from PIL import Image
 import numpy as np
 import time
 import sys
+import os
+
 
 # Parse command line arguments
 name = sys.argv[1]
 resolution = int(sys.argv[2])
 pal = sys.argv[3]
 
+# Check if the folder outputs exists
+if not os.path.exists("outputs"):
+    os.makedirs("outputs")
+    
 # Convert hex code to RGB
 def hex_to_rgb(hex_code):
     hex_code = hex_code.lstrip('#')
