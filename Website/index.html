@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pixel Art Creator</title>
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+
+        <h1>Pixel Art Creator</h1>
+
+        <label for="imageInput">Choose an image:</label>
+        <input type="file" id="imageInput">
+        <br>
+
+        <label for="resolutionSlider">Resolution:</label>
+        <input type="number" id="resolutionSlider" min="1" max="25" step="1"
+            value="10">
+        <br>
+
+        <label for="folderDropdown">Select an color palette:</label>
+        <select id="folderDropdown">
+            <!-- Options will be populated here -->
+        </select>
+        <br>
+
+        <button id="executeButton">Create Pixel Art</button>
+
+        <!-- Placeholder for the generated pixel art image -->
+        <img id="pixelArtImage" src alt="Generated Pixel Art"
+            style="display:none;">
+
+    </body>
+</html>
