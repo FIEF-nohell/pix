@@ -35,10 +35,14 @@ The final argument is the color palette. You can browse available options in the
 
 
 ## Examples
-### Original Image Left
+### Resolution 4
 [![grafik.png](https://i.postimg.cc/qRPzNyT1/grafik.png)](https://postimg.cc/WF72KDtZ)
 
+### Resolution 8
+[![grafik.png](https://i.postimg.cc/bvbvKdbb/grafik.png)](https://postimg.cc/wtqHNqwT)
 
+### Resolution 12
+[![grafik.png](https://i.postimg.cc/5yjWWkGG/grafik.png)](https://postimg.cc/kRrpxw7F)
 
 ## Palettes
 
