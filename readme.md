@@ -35,7 +35,7 @@ The final argument is the color palette. You can browse available options in the
 
 
 ## Examples
-## Original Image Left
+### Original Image Left
 [![grafik.png](https://i.postimg.cc/qRPzNyT1/grafik.png)](https://postimg.cc/WF72KDtZ)
 
 
