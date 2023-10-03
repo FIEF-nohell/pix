@@ -24,6 +24,8 @@ pip install -r requirements.txt
 It is very simple to run this tool. First open the `startAPI.bat` and after that is running open `startGUI.bat`. 
 When both are running the webserver should be open at `localhost:6969/index.html` 
 
+[![grafik.png](https://i.postimg.cc/GpzMMDGX/grafik.png)](https://postimg.cc/VSrBvd7t)
+
 
 ## Usage
 
