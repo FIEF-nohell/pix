@@ -63,6 +63,8 @@ Original image left, dawn palette in the middle and nyx on the right.
 
 All other palettes are sourced from [Lospec](https://lospec.com). You can download more palettes from their website. Simply select one and download the HEX file, then place it in the palettes folder
 
+## To-Do's
+[] Converte to a Unity Compute Shader using HLSL
 
 ## Acknowledgments
 
